@@ -225,7 +225,7 @@ def word(prototype: PrototypePattern) -> Pattern:
     return concat(Atom.WORD_BOUNDARY, ensure_pattern(prototype), Atom.WORD_BOUNDARY)
 
 
-WORD = at_least_once(Class.WORD)
+WORD = word(at_least_once(Class.WORD))
 WHITESPACE = at_least_once(Class.WHITESPACE)
 
 
